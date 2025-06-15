@@ -2,8 +2,6 @@ extern crate actix_web;
 extern crate web_push;
 extern crate uuid;
 extern crate actix_cors;
-extern crate serde_json;
-extern crate ct_codecs;
 
 use actix_cors::Cors;
 use actix_web::{App, HttpServer, web};

@@ -13,8 +13,6 @@ pub async fn subscribe(
 	payload: web::Json<SubscriptionRequest>,
 	data: web::Data<Subscriptions>
 ) -> impl Responder {
-	// println!("subscribe payload {:?}", payload);
-
 	let id = do_subscribe(&data, &payload)
 		.await;
 
@@ -35,5 +33,8 @@ pub async fn notify (
 	payload: web::Json<NotificationRequest>,
 	data: web::Data<Subscriptions>
 ) -> impl Responder {
-	HttpResponse::Ok().body("Hey there!")
+
+	let _ = do_notification(&data, &payload).await;
+
+	HttpResponse::Ok().body("")
 }

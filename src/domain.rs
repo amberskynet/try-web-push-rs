@@ -1,7 +1,5 @@
-use std::io::{Cursor};
-use ct_codecs::{Base64UrlSafeNoPadding, Decoder};
 use uuid::Uuid;
-use web_push::{ContentEncoding, IsahcWebPushClient, SubscriptionInfo, VapidSignatureBuilder, WebPushClient, WebPushError, WebPushMessage, WebPushMessageBuilder};
+use web_push::{ContentEncoding, IsahcWebPushClient, SubscriptionInfo, VapidSignatureBuilder, WebPushClient, WebPushMessageBuilder};
 use crate::models::NotificationRequest;
 use crate::app_data::Subscriptions;
 use crate::models::SubscriptionRequest;
