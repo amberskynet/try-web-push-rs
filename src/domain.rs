@@ -34,13 +34,6 @@ pub async fn do_notification (s: &Subscriptions, r: &NotificationRequest ) -> Re
 
 	let pem_content = "gei4NsFoTBLOZAFiaPdOLvJsZmUk6ufCU8w3JrBGSBk";
 
-// 	let _public_key = "-----BEGIN PUBLIC KEY-----
-// MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEa0asPq8XZCxRMmkHehMDn1eYiLhX
-// ERtWokM677Q4Ah7p8dWmyRe7JXwtJQTlpBUw1K4z0RVGzQ3wFmJ/UyNqHQ==
-// -----END PUBLIC KEY-----";
-
-	// let cursor = Cursor::new(pem_content);
-
 	println!("sub_info: {:?}", &sub_info);
 
 	let sig_builder = VapidSignatureBuilder::from_base64(pem_content, &sub_info)
