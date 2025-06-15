@@ -23,3 +23,8 @@ target/
 git-reset-author.sh
 git-set-local.sh
 git-set-remotes.sh
+
+
+# Added by cargo
+
+/target
